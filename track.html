@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Track Shipment</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .tracking input[type="text"], .tracking button {
+            max-width: 400px;
+            width: 90%;
+            display: block;
+            margin: 10px auto;
+        }
+        .tracking {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
     <script>
         function checkTracking() {
             const input = document.getElementById("tracking-code").value.trim();
@@ -38,7 +50,7 @@
             <input type="text" id="tracking-code" placeholder="Enter tracking number..." />
             <button onclick="checkTracking()">Track</button>
             <p id="error" style="color:red; display:none;">Invalid tracking code. Please try again.</p>
-            <div id="details" style="display:none;">
+            <div id="details" style="display:none; text-align:left; max-width: 600px; margin: 20px auto;">
                 <p><strong>Status:</strong> 🟡 In Transit</p>
                 <h3>Shipper Information:</h3>
                 <p>Name: Gabriela Mendez<br />
