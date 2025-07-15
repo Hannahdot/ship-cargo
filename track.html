@@ -22,7 +22,7 @@
       margin-top: 40px;
       padding-top: 20px;
       border-top: 2px solid #ccc;
-      max-width: 600px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
@@ -38,6 +38,19 @@
       font-size: 16px;
       color: red;
       font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
     }
   </style>
   <script>
@@ -75,14 +88,37 @@
     </section>
     <div id="details" class="shipment-details" style="display:none;">
       <p><strong>Status:</strong> 🟡 In Transit</p>
-      
       <h3>Shipment History:</h3>
-      <ul>
-        <li>July 15, 2025, 7:00 AM – Item received</li>
-        <li>July 15, 2025, 7:45 AM – Scanned at ACC-SORT001 | Accra Sorting Hub</li>
-        <li>July 15, 2025, 8:20 AM – Item departed from a sorting facility in Accra</li>
-      </ul>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Date & Time</th>
+            <th>Event Description</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>July 15, 2025, 7:00 AM</td>
+            <td>Item received from sender</td>
+            <td>Accra, Ghana</td>
+            <td>✅ Received</td>
+          </tr>
+          <tr>
+            <td>July 15, 2025, 7:45 AM</td>
+            <td>Scanned at ACC-SORT001 | Accra Sorting Hub</td>
+            <td>Accra, Ghana</td>
+            <td>✅ Scanned</td>
+          </tr>
+          <tr>
+            <td>July 15, 2025, 8:20 AM</td>
+            <td>Departed sorting facility</td>
+            <td>Accra, Ghana</td>
+            <td>📦 In Transit</td>
+          </tr>
+        </tbody>
+      </table>
       <div class="spacer"></div>
       <p><strong>Expected Delivery Date:</strong> July 25, 2025 (End of Day)</p>
       <p><strong>Destination:</strong> Tennessee</p>
@@ -100,10 +136,10 @@
       </div>
       <div class="spacer"></div>
       <h3>Shipment Path:</h3>
-      <p>📍 Accra (Ghana) → 📦 Nigeria → 🇧🇪 Belgium → 🇺🇸 Ohio → 📦 Tennessee</p>
+      <p>📍 Ghana → Nigeria → Belgium → Ohio → Tennessee</p>
       <div class="spacer"></div>
       <h3>Proof of Package:</h3>
-      <img src="package.jpg" alt="Proof of Package" style="max-width:100%; border:1px solid #ccc;"/>
+      <img src="package.jpg" alt="Proof of Package" style="max-width:100%; border:1px solid #ccc;" />
     </div>
   </main>
   <footer>
