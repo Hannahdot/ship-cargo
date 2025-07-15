@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #002f6c;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #002f6c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li::before {
+    content: "→ ";
+    color: #002f6c;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+form button {
+    background-color: #002f6c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
