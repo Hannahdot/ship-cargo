@@ -2,14 +2,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Track Shipment</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function checkTracking() {
+            const input = document.getElementById("tracking-code").value.trim();
+            const validCode = "539667479";
+            const details = document.getElementById("details");
+            const error = document.getElementById("error");
+            if (input === validCode) {
+                details.style.display = "block";
+                error.style.display = "none";
+            } else {
+                details.style.display = "none";
+                error.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Ship Cargo Logo" class="logo">
+        <img src="logo.png" alt="Ship Cargo Logo" class="logo" />
         <h1>Track Your Shipment</h1>
         <nav>
             <a href="index.html">Home</a>
@@ -19,21 +34,26 @@
     </header>
     <main>
         <section class="tracking">
-            <h2>Tracking Code: 539667479</h2>
-            <p><strong>Status:</strong> 🟡 In Transit</p>
-            <h3>Shipper Information:</h3>
-            <p>Name: Gabriela Mendez<br>
-               Location: Accra, Ghana<br>
-               Email: gabriellamendez180@gmail.com</p>
-            <h3>Recipient Information:</h3>
-            <p>Name: Roland Herbert DeLucca, JR.<br>
-               Address: 480 Georgetown Road, Clarksville, Tennessee 37043, USA<br>
-               Phone: 931-800-7976</p>
-            <h3>Shipment History:</h3>
-            <ul>
-                <li>July 15, 2025, 7:00 AM – Item received</li>
-                <li>July 15, 2025, 8:20 AM – Item departed from a sorting facility in Accra</li>
-            </ul>
+            <h2>Enter Tracking Code</h2>
+            <input type="text" id="tracking-code" placeholder="Enter tracking number..." />
+            <button onclick="checkTracking()">Track</button>
+            <p id="error" style="color:red; display:none;">Invalid tracking code. Please try again.</p>
+            <div id="details" style="display:none;">
+                <p><strong>Status:</strong> 🟡 In Transit</p>
+                <h3>Shipper Information:</h3>
+                <p>Name: Gabriela Mendez<br />
+                   Location: Accra, Ghana<br />
+                   Email: gabriellamendez180@gmail.com</p>
+                <h3>Recipient Information:</h3>
+                <p>Name: Roland Herbert DeLucca, JR.<br />
+                   Address: 480 Georgetown Road, Clarksville, Tennessee 37043, USA<br />
+                   Phone: 931-800-7976</p>
+                <h3>Shipment History:</h3>
+                <ul>
+                    <li>July 15, 2025, 7:00 AM – Item received</li>
+                    <li>July 15, 2025, 8:20 AM – Item departed from a sorting facility in Accra</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
